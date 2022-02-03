@@ -28,7 +28,7 @@
     "lint": "mrt lint '\"**/*.{js,jsx}\"'",
     "lint:fix": "npm run lint -- --fix",
     "start": "mrt start",
-    "build": "mrt build",
+    "build": "mrt build && npm run remix:build",
     "push": "mrt push",
     "save-credentials": "mrt save-credentials",
     "remix:build": "remix build",

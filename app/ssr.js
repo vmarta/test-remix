@@ -40,7 +40,6 @@ const {handler} = runtime.createHandler(options, (app) => {
     //     })
     // })
 
-    // runtime.addSSRRenderer(app)
 
     app.use(compression());
 
@@ -48,7 +47,7 @@ const {handler} = runtime.createHandler(options, (app) => {
     app.use(express.static("public", { maxAge: "1h" }));
 
     // Remix fingerprints its assets so we can cache forever
-    app.use(express.static("public/build", { immutable: true, maxAge: "1y" }));
+    app.use(express.static("build", { immutable: true, maxAge: "1y" }));
 
     app.use(morgan("tiny"));
     app.all(
@@ -80,6 +79,8 @@ const {handler} = runtime.createHandler(options, (app) => {
         }
       }
     }
+
+    // runtime.addSSRRenderer(app)
 })
 
 exports.get = handler
