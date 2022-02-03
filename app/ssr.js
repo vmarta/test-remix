@@ -14,7 +14,7 @@ const morgan = require("morgan");
 const { createRequestHandler } = require("@remix-run/express");
 
 const MODE = process.env.NODE_ENV;
-const BUILD_DIR = path.join(process.cwd(), "build");
+const BUILD_DIR = path.join(process.cwd(), "server/build");
 
 const options = {
     buildDir: path.resolve(process.cwd(), 'build'),
