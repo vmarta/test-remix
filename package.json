@@ -30,7 +30,12 @@
     "start": "mrt start",
     "build": "mrt build",
     "push": "mrt push",
-    "save-credentials": "mrt save-credentials"
+    "save-credentials": "mrt save-credentials",
+    "remix:build": "remix build",
+    "remix:dev": "remix watch",
+    "postinstall": "remix setup node",
+    "remix:start": "cross-env NODE_ENV=production node server/index.js",
+    "remix:start-dev": "cross-env NODE_ENV=development node server/index.js"
   },
   "mobify": {
     "ssrEnabled": true,
